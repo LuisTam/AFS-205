@@ -1,11 +1,51 @@
 version: "3"
 services:
- www:
-  image: httpd
-  restart: always
-  ports: 
-   - 80:80
-    
+  www:
+    image: httpd
+    restart: always
+    ports: 
+    - 80:80
+    volumes:
+    - "./htdocs/:/usr/local/apache2/htdocs"
+    - "./conf/:/usr/local/apache2/conf"
+    depends_on:
+     - db
+
+  db:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+
+  matomo:
+    image: matomo:latest
+    restart: always
+    volumes:
+      - matomo:/var/www/html:z
+    environment:
+      MATOMO_DATABASE_HOST: db
+      MYSQL_PASSWORD: matomo123
+      MYSQL_DATABASE: matomo
+      MYSQL_USER: matomo
+      MATOMO_DATABASE_ADAPTER: mysql
+      MATOMO_DATABASE_TABLES_PREFIX: matomo_
+      MATOMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_PASSWORD: 
+      MATOMO_DATABASE_DBNAME: matomo
+      MARIADB_AUTO_UPGRADE: 1
+      MARIADB_INITDB_SKIP_TZINFO: 1
+    ports:
+      - 8080:80
+    depends_on:
+     - db
 volumes:
-  - "./htdocs/:/usr/local/apache2/htdocs"
-  - "./conf/:/usr/local/apache2/conf"
+  db_data:
+  matomo:
