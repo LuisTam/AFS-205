@@ -1,0 +1,34 @@
+body{
+    background-image: url("astronaut.jpg");
+    background-size: 350px;
+}
+h1{
+    text-align: center;
+    background-color: red;
+    padding: 20px;
+    font-size: 500%;
+    color:white;
+    border-radius: 30px;
+    border: 5px dashed white;
+
+}
+h1:hover{
+    border: 10px solid black;
+ 
+}
+
+p{
+    color: red;
+    padding: 20px;
+    font-size: xx-large;
+    background-color: white;
+    transition-timing-function: ease-in;
+    transition-delay: .5s;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px dotted red;
+
+}
+p:hover{
+    visibility: hidden;
+}

@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+}
+#welcome{
+    text-align: center;
+    background-color: whitesmoke;
+    font-size: 350%;
+    padding: 20px;
+    color: rgb(181, 47, 202);
+    border-radius: 20px;
+}
+h2{
+    background-color: rgb(181, 47, 202);
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+.Decal{
+    margin-left: 10px;
+    text-decoration:overline;
+    font-size: 200%;
+    background-color: rgb(181, 47, 202);
+    color: whitesmoke;
+    padding:10px;
+    border-radius: 20px;
+}
+.Decal:hover{
+    text-decoration: underline;
+    background-color: whitesmoke;
+    color: rgb(181, 47, 202);
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+img{
+    margin-left: 20px;
+    box-shadow: 0 0 40px 2px rgb(77, 77, 254);
+    border-radius: 30px;
+}
+.decals{
+    margin-left: 25px;
+    font-size: x-large;
+    color: whitesmoke;
+}

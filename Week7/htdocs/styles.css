@@ -1,0 +1,90 @@
+body{
+    background-color: yellow;
+}
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    transition-delay: .1s;
+    border-radius: 10px;
+}
+#logo:hover{
+    border-radius: 50%;
+    box-shadow: 0 0 20px 1px red;
+    transform:scaleX(-1);
+}
+#intro{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size:  550%;
+}
+#intro:hover{
+    color: red;
+}
+p{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+    text-decoration: underline;
+    color:blueviolet
+}
+#silvia{
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    box-shadow: 10px 0px 30px 10px blueviolet;
+    border-radius: 30px;
+}
+#btn{
+    font-size: larger;
+    padding: 20px;
+    margin-bottom: 80px;
+    margin-top: 90px;
+    align-items: center;
+    border-radius: 30px;
+    border: 3px solid blueviolet;
+    background-color: yellow;
+}
+.center{
+    text-align: center;
+}
+#btn:hover{
+    background-color: red;
+    border: yellow;
+    text-decoration: underline;
+    color: blueviolet;
+}
+#btn:active{
+    background-color: red;
+    box-shadow: 0 0 30px 10px blueviolet;
+    transform: rotateY(4px);
+}
+#arena{
+    text-align: center;
+}
+.vida{
+    text-decoration: underline;
+    color: blueviolet;
+}
+#vidaArena{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    border-radius: 30px;
+    opacity: 30px;
+}
+h3{
+    text-align: center;
+    color: red;
+    font-size: x-large;
+}
+h3:hover{
+    text-decoration: underline;
+    color: blueviolet;
+}
